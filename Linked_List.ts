@@ -19,7 +19,7 @@ class EachNode {
 
 }
 
-class LinkedList {
+export class LinkedList {
   /**
    * Singly Linked List
    */
@@ -143,6 +143,25 @@ class LinkedList {
 
   }
 
+  public node_in_index(index: number): EachNode | null {
+    /**
+     * Takes in the index value
+     * Returns the node in the index 
+     * takes O(n) time
+     */
+    let position: number = 0
+    let current = this.head
+
+    while (position < index && current !== null) {
+
+      current = current.next_node
+      position++
+
+    }
+    return current
+
+  }
+
 
 
 
@@ -204,3 +223,6 @@ console.warn(`Remove Operation `)
 console.warn(`removing 35`)
 console.log(l.remove(35))
 console.log(l.toString())
+
+
+console.log(l.node_in_index(2) + '')
