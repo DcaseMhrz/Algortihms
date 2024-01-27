@@ -14,4 +14,5 @@ function reverseInt(n: number): number {
 
   return parseInt(reversedString) * Math.sign(n)
 }
-console.log(reverseInt(-90))
+
+export default reverseInt
